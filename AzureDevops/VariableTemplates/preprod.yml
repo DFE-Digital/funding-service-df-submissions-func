@@ -1,0 +1,6 @@
+variables:
+  ResourcePrefix: s255t02
+  AzureSubscription: 'c4542a65-affe-40bb-a9c0-33fc31feb3c9'
+
+  # Tags
+  EnvironmentTag: Pre-Prod

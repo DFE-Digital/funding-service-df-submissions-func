@@ -1,0 +1,52 @@
+﻿{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "environmentTag": {
+            "value": "Dev"
+        },
+        "parentBusinessTag": {
+            "value": "Funding and Allocations"
+        },
+        "portfolioTag": {
+            "value": "Education and Skills Funding Agency"
+        },
+        "productTag": {
+            "value": "Funding Service Digital Forms"
+        },
+        "serviceTag": {
+            "value": "Funding and Allocations"
+        },
+        "serviceLineTag": {
+            "value": "Funding"
+        },
+        "serviceOfferingTag": {
+            "value": "Plan Your Grant"
+        },
+        "sharedVirtualNetworkName": {
+            "value": "AVirtualNetwork"
+        },
+        "funcsSubnetName": {
+            "value": "ASubnet"
+        },
+        "sharedLogAnalyticsName": {
+            "value": "ASharedLogAnalyticsAccount"
+        },
+        "sharedAppInsightsName": {
+            "value": "AnAppInsightsInstance"
+        },
+        "sharedKeyVaultName": {
+            "value": "AKeyVaultInstance"
+        },
+        "sharedLinuxFunctionAppServicePlanName": {
+            "value": "ALinuxAppServicePlan"
+        },
+        "dfSubmissionLinuxFunctionAppName": {
+            "value": "LinuxAppService"
+        },
+        "sharedResourceGroupName" :{
+            "value": "aResourceGroup"
+        }
+    }
+}
+

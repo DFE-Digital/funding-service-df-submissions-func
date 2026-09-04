@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "df_PrintPdf_function": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7221 --verbose"
+    }
+  }
+}

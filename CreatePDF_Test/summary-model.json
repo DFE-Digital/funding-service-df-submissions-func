@@ -1,0 +1,96 @@
+{
+  "message": {
+    "pageTitle": "Summary",
+    "declaration": "undefined",
+    "customSummaryMessage": "undefined",
+    "skipSummary": false,
+    "endPage": null,
+    "details": [
+      {
+        "name": "undefined",
+        "title": "undefined",
+        "items": [
+          {
+            "name": "ClyUcc",
+            "path": "/first-page",
+            "label": "dsi",
+            "value": "10078001",
+            "rawValue": "10078001",
+            "url": "/3a0u84dd0g/first-page?returnUrl=%2F3a0u84dd0g%2Fsummary",
+            "pageId": "/3a0u84dd0g/first-page",
+            "type": "DSIAccess",
+            "title": "dsi",
+            "dataType": "text",
+            "result": "undefined",
+            "options": {
+              "required": false
+            },
+            "organizationName": "Hargrave Park Primary School"
+          },
+          {
+            "name": "FbzHzw",
+            "path": "/second-page",
+            "label": "Multiline text",
+            "value": "eqw",
+            "rawValue": "eqw",
+            "url": "/3a0u84dd0g/second-page?returnUrl=%2F3a0u84dd0g%2Fsummary",
+            "pageId": "/3a0u84dd0g/second-page",
+            "type": "MultilineTextField",
+            "title": "Multiline text",
+            "dataType": "text",
+            "result": "undefined",
+            "options": {
+
+            },
+            "organizationName": "Hargrave Park Primary School"
+          }
+        ]
+      }
+    ],
+    "fees": "undefined",
+    "name": "TestForm383",
+    "feedbackLink": "undefined",
+    "phaseTag": "undefined",
+    "declarationError": "undefined",
+    "customSummaryMessageError": "undefined",
+    "errors": "undefined",
+    "referenceNumber": "4AGh_yIVgf",
+    "currentTimeString": "2025-11-20, 10:55 AM",
+    "pdfPrintStatus": "NOT SUBMITTED",
+    "_outputs": [
+      {
+        "type": "notify",
+        "outputData": {
+          "templateId": "6e64408c-47da-4a96-b944-9e6215f7db9d",
+          "personalisation": {
+
+          },
+          "emailAddress": "undefined",
+          "apiKey": "undefined",
+          "addReferencesToPersonalisation": false
+        }
+      }
+    ],
+    "_payApiKey": "undefined",
+    "accessibilityLink": "undefined",
+    "cookiesLink": "undefined",
+    "privacyLink": "undefined",
+    "email": "Vimal.MANIVANNAN@education.gov.uk",
+    "outputType": [
+      {
+        "name": "rvDGpO",
+        "title": "out",
+        "type": "notify",
+        "outputConfiguration": {
+          "personalisation": [
+
+          ],
+          "templateId": "6e64408c-47da-4a96-b944-9e6215f7db9d",
+          "apiKey": "undefined",
+          "emailField": "notify_dsi_signin_email",
+          "addReferencesToPersonalisation": false
+        }
+      }
+    ]
+  }
+}

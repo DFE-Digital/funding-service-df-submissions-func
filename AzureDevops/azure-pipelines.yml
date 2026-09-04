@@ -1,0 +1,98 @@
+﻿pool:
+  vmImage: windows-2022
+
+trigger:
+  branches:
+    include:
+    - main
+    - release/*
+
+stages:
+- stage: TestTemplates
+  jobs:
+    - job: BuildTestAndPublish
+      displayName: Build Function, Test and publish ARM templates
+      steps:
+      - task: AzurePowerShell@4
+        displayName: 'Test ARM templates'
+        inputs:
+          azureSubscription: 's255d.azdo.deployment'
+          scriptType: filePath
+          scriptPath: '$(System.DefaultWorkingDirectory)\Scripts\Test-ArmTemplate.ps1'
+          scriptArguments: -ResourceGroup 's255d01rg-uks-tpltest01' -BaseDirectory '$(System.DefaultWorkingDirectory)\ARMTemplates' -Verbose
+          azurePowerShellVersion: LatestVersion
+
+      - task: PublishPipelineArtifact@1
+        displayName: Publish Pipeline Artifact
+        inputs:
+          artifactName: 'DigForms.ArmTemplates.dfSubmissionsFA'
+          targetPath: '$(System.DefaultWorkingDirectory)\ArmTemplates'
+
+      - task: DotNetCoreCLI@2
+        displayName:  Build function app
+        inputs:
+          command: 'build'
+          arguments: --configuration Release
+          projects: 'dfsubmissions_PrintPdfq/dfsubmissions_pdfprintq.csproj'
+
+      - task: DotNetCoreCLI@2
+        displayName:  Publish function app
+        inputs:
+          command: 'publish'
+          arguments: --configuration Release
+          nobuild: true
+          publishWebProjects: false
+          zipAfterPublish: true
+          projects: 'dfsubmissions_PrintPdfq\dfsubmissions_pdfprintq.csproj'
+
+      - powershell: Get-ChildItem -Path '$(System.DefaultWorkingDirectory)' -recurse
+
+      - task: PublishPipelineArtifact@1
+        displayName: Package function app
+        inputs:
+          artifactName: 'DigForms.dfSubmissionsFA'
+          targetPath: '$(System.DefaultWorkingDirectory)\dfsubmissions_PrintPdfq\bin\Release\net8.0\publish.zip'
+
+- stage: DeployToDev
+  variables:
+  - template: VariableTemplates\dev.yml
+  - template: VariableTemplates\shared.yml
+  jobs:
+  - template: JobTemplates\deploy.yml
+    parameters:
+      AzureServiceConnection: 's255d.azdo.deployment'
+      Environment: Dev
+
+- stage: DeployToTest
+ 
+  condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/main'), startsWith(variables['Build.SourceBranch'], 'refs/heads/release/')))
+  variables:
+  - template: VariableTemplates\test.yml
+  - template: VariableTemplates\shared.yml
+  jobs:
+  - template: JobTemplates\deploy.yml
+    parameters:
+      AzureServiceConnection: 's255t.azdo.deployment'
+      Environment: Test
+
+- stage: DeployToPreProduction
+  condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/main'), startsWith(variables['Build.SourceBranch'], 'refs/heads/release/')))
+  variables:
+  - template: VariableTemplates\preprod.yml
+  - template: VariableTemplates\shared.yml
+  jobs:
+  - template: JobTemplates\deploy.yml
+    parameters:
+      AzureServiceConnection: 's255t.azdo.deployment'
+      Environment: PreProduction
+
+- stage: DeployToProduction
+  condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/main'), startsWith(variables['Build.SourceBranch'], 'refs/heads/release/')))
+  variables:
+  - template: VariableTemplates\prod.yml
+  - template: VariableTemplates\shared.yml
+  jobs:
+  - template: JobTemplates\deploy.yml
+    parameters:
+      AzureServiceConnection: 's255p.azdo.deployment'
+      Environment: Production

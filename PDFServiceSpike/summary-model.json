@@ -1,0 +1,164 @@
+{
+  "pageTitle": "Summary",
+  "declaration": "",
+  "customSummaryMessage": "",
+  "skipSummary": false,
+  "endPage": null,
+  "details": [
+    {
+      "name": "",
+      "title": "",
+      "items": [
+        {
+          "name": "NHRHwm",
+          "path": "/second-page",
+          "label": "Autocomplete",
+          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus nibh in ultricies lacinia. Etiam vel imperdiet ex. Integer hendrerit sodales arcu quis vestibulum. Vivamus felis lectus, venenatis ac placerat ac, fermentum ut nulla. In hac habitasse platea dictumst. Proin nec nisi convallis, hendrerit orci eu, gravida ante. Suspendisse in ex in nibh semper maximus accumsan ac nibh. 3",
+          "rawValue": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus nibh in ultricies lacinia. Etiam vel imperdiet ex. Integer hendrerit sodales arcu quis vestibulum. Vivamus felis lectus, venenatis ac placerat ac, fermentum ut nulla. In hac habitasse platea dictumst. Proin nec nisi convallis, hendrerit orci eu, gravida ante. Suspendisse in ex in nibh semper maximus accumsan ac nibh. 3",
+          "url": "/js7jmzp9mh/second-page?returnUrl=%2Fjs7jmzp9mh%2Fsummary",
+          "pageId": "/js7jmzp9mh/second-page",
+          "type": "AutocompleteField",
+          "title": "Autocomplete",
+          "dataType": "list",
+          "result": "",
+          "options": {
+            "classes": "govuk-input--width-20"
+          }
+        },
+        {
+          "name": "UMxXtl",
+          "path": "/second-page",
+          "label": "Email",
+          "value": "example@gmail.com",
+          "rawValue": "example@gmail.com",
+          "url": "/js7jmzp9mh/second-page?returnUrl=%2Fjs7jmzp9mh%2Fsummary",
+          "pageId": "/js7jmzp9mh/second-page",
+          "type": "EmailAddressField",
+          "title": "Email",
+          "dataType": "text",
+          "result": "",
+          "options": {
+            "classes": "govuk-input--width-10"
+          }
+        },
+        {
+          "name": "CLmTuM",
+          "path": "/second-page",
+          "label": "Multiline Text",
+          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus nibh in ultricies lacinia. Etiam vel imperdiet ex. Integer hendrerit sodales arcu quis vestibulum. Vivamus felis lectus, venenatis ac placerat ac, fermentum ut nulla. In hac habitasse platea dictumst. Proin nec nisi convallis, hendrerit orci eu, gravida ante. Suspendisse in ex in nibh semper maximus accumsan ac nibh.",
+          "rawValue": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus nibh in ultricies lacinia. Etiam vel imperdiet ex. Integer hendrerit sodales arcu quis vestibulum. Vivamus felis lectus, venenatis ac placerat ac, fermentum ut nulla. In hac habitasse platea dictumst. Proin nec nisi convallis, hendrerit orci eu, gravida ante. Suspendisse in ex in nibh semper maximus accumsan ac nibh.",
+          "url": "/js7jmzp9mh/second-page?returnUrl=%2Fjs7jmzp9mh%2Fsummary",
+          "pageId": "/js7jmzp9mh/second-page",
+          "type": "MultilineTextField",
+          "title": "Multiline Text",
+          "dataType": "text",
+          "result": "",
+          "options": {}
+        },
+        {
+          "name": "dCKrux",
+          "path": "/second-page",
+          "label": "Number",
+          "value": "123",
+          "rawValue": 123,
+          "url": "/js7jmzp9mh/second-page?returnUrl=%2Fjs7jmzp9mh%2Fsummary",
+          "pageId": "/js7jmzp9mh/second-page",
+          "type": "NumberField",
+          "title": "Number",
+          "dataType": "text",
+          "result": "",
+          "options": {}
+        },
+        {
+          "name": "wimygh",
+          "path": "/second-page",
+          "label": "Text",
+          "value": "Lorem",
+          "rawValue": "Lorem",
+          "url": "/js7jmzp9mh/second-page?returnUrl=%2Fjs7jmzp9mh%2Fsummary",
+          "pageId": "/js7jmzp9mh/second-page",
+          "type": "TextField",
+          "title": "Text",
+          "dataType": "text",
+          "result": "",
+          "options": {
+            "classes": "govuk-input--width-20"
+          }
+        }
+      ]
+    },
+    {
+        "name": "qBSgHk",
+        "title": "Sample Section",
+        "items": [
+            {
+                "name": "AYHRfh",
+                "path": "/third-page",
+                "label": "Multiline under section",
+                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus nibh in ultricies lacinia. Etiam vel imperdiet ex. Integer hendrerit sodales arcu quis vestibulum. Vivamus felis lectus, venenatis ac placerat ac, fermentum ut nulla. In hac habitasse platea dictumst. Proin nec nisi convallis, hendrerit orci eu, gravida ante. Suspendisse in ex in nibh semper maximus accumsan ac nibh under section",
+                "rawValue": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus nibh in ultricies lacinia. Etiam vel imperdiet ex. Integer hendrerit sodales arcu quis vestibulum. Vivamus felis lectus, venenatis ac placerat ac, fermentum ut nulla. In hac habitasse platea dictumst. Proin nec nisi convallis, hendrerit orci eu, gravida ante. Suspendisse in ex in nibh semper maximus accumsan ac nibh under section",
+                "url": "/js7jmzp9mh/third-page?returnUrl=%2Fjs7jmzp9mh%2Fsummary",
+                "pageId": "/js7jmzp9mh/third-page",
+                "type": "MultilineTextField",
+                "title": "Multiline under section",
+                "dataType": "text",
+                "result": "undefined",
+                "options": {
+                },
+                "subTitle": "Sample Section",
+                "subTitleNum": 0
+            },
+            {
+                "name": "OKqxpm",
+                "path": "/third-page",
+                "label": "Number under section",
+                "value": "9999",
+                "rawValue": 9999,
+                "url": "/js7jmzp9mh/third-page?returnUrl=%2Fjs7jmzp9mh%2Fsummary",
+                "pageId": "/js7jmzp9mh/third-page",
+                "type": "NumberField",
+                "title": "Number under section",
+                "dataType": "text",
+                "result": "undefined",
+                "options": {
+                },
+                "subTitle": "Sample Section",
+                "subTitleNum": 1
+            },
+            {
+                "name": "SCpURN",
+                "path": "/third-page",
+                "label": "Text under section",
+                "value": "Lorem 999",
+                "rawValue": "Lorem 999",
+                "url": "/js7jmzp9mh/third-page?returnUrl=%2Fjs7jmzp9mh%2Fsummary",
+                "pageId": "/js7jmzp9mh/third-page",
+                "type": "TextField",
+                "title": "Text under section",
+                "dataType": "text",
+                "result": "undefined",
+                "options": {
+                    "classes": "govuk-input--width-20"
+                },
+                "subTitle": "Sample Section",
+                "subTitleNum": 2
+            }
+        ]
+    }
+  ],
+  "fees": "",
+  "name": "summary-test",
+  "feedbackLink": "https://digital-forms.education.gov.uk/pHimWsw_Cv/give-feedback-on-digital-forms",
+  "phaseTag": "",
+  "declarationError": "",
+  "customSummaryMessageError": "",
+  "errors": "",
+  "referenceNumber": "lJXVzHhEge",
+  "currentTimeString": "2023-12-18, 05:22 PM",
+  "pdfPrintStatus": "NOT SUBMITTED",
+  "_outputs": [],
+  "_payApiKey": "",
+  "accessibilityLink": "/accessibility-statement",
+  "email": "example@gmail.com",
+  "outputType": []
+}

@@ -1,0 +1,33 @@
+﻿parameters:
+- name: AzureServiceConnection
+  type: string
+- name: Environment
+  type: string
+
+jobs:
+- deployment: DeployTo${{ parameters.Environment }}
+  displayName: "Deploy To ${{ parameters.Environment }}"
+  environment:  Digital Forms - ${{ parameters.Environment }}
+  strategy:
+    runOnce:
+      deploy:
+        steps:
+        - task: AzureResourceManagerTemplateDeployment@3
+          displayName: 'Deploy arm template'
+          inputs:
+            azureResourceManagerConnection: '${{ parameters.AzureServiceConnection }}'
+            subscriptionId: '$(AzureSubscription)'
+            resourceGroupName: '$(AppServiceResourceGroupName)'
+            location: 'UK South'
+            csmFile: '$(Pipeline.Workspace)/DigForms.ArmTemplates.dfSubmissionsFA/template.json'
+            deploymentName: 'DF-Submission-func-app'
+            overrideParameters: '-environmentTag "$(EnvironmentTag)" -parentBusinessTag "$(ParentBusinessTag)" -portfolioTag "$(PortfolioTag)" -productTag "$(ProductTag)" -serviceLineTag "$(ServiceLineTag)" -serviceTag "$(ServiceTag)" -serviceOfferingTag "$(ServiceOfferingTag)" -sharedResourceGroupName "$(SharedResourceGroupName)" -sharedVirtualNetworkName "$(SharedVirtualNetworkName)" -funcsSubnetName "$(funcsSubnetName)" -sharedLogAnalyticsName "$(SharedLogAnalyticsName)" -sharedAppInsightsName "$(SharedAppInsightsName)" -sharedKeyVaultName "$(SharedKeyVaultName)" -sharedLinuxFunctionAppServicePlanName "$(sharedLinuxFunctionAppServicePlanName)" -dfSubmissionLinuxFunctionAppName "$(dfSubmissionLinuxFunctionAppName)"'
+
+        - task: AzureRMWebAppDeployment@4
+          displayName: Deploy function app
+          inputs:
+            appType: 'webApp'
+            WebAppName: '$(dfSubmissionLinuxFunctionAppName)'
+            ConnectedServiceName: '${{ parameters.AzureServiceConnection }}'
+            Package: '$(Pipeline.Workspace)/DigForms.dfSubmissionsFA/publish.zip'
+

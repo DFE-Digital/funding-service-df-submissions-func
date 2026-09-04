@@ -1,0 +1,7 @@
+﻿variables:
+  ResourcePrefix: s255d01
+  AzureSubscription: '51199e9b-8fa9-4269-825e-fa5d7cc2b857'
+  
+
+  # Tags
+  EnvironmentTag: Dev
