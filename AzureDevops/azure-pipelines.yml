@@ -1,4 +1,4 @@
-﻿pool:
+pool:
   vmImage: windows-2022
 
 trigger:
